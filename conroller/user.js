@@ -15,7 +15,7 @@ module.exports.createUser=async (req,res,next) =>{
         if(err){
           return next(err);
         }
-        req.flash("success","You succefully Signup! Welcome to WanderLust");
+        req.flash("success","You succefully Signup! Welcome to ExploreStay");
         res.redirect("/listings");
       })
       
@@ -32,7 +32,7 @@ module.exports.loginRoute=(req,res) => {
 }
 
 module.exports.login= async (req,res)=> {
-    req.flash("success","Welcome back to Wanderlust! You logged in!");
+    req.flash("success","Welcome back to ExploreStay! You logged in!");
     let redirectUrl= res.locals.redirectUrl || "/listings"
     res.redirect(redirectUrl);
  }
