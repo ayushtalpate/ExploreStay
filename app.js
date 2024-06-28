@@ -61,9 +61,9 @@ const sessionOption ={
 };
 
 
-app.get("/",(req,res)=>{
-    res.send("Root route working");
-})
+// app.get("/",(req,res)=>{
+//     res.send("Root route working");
+// })
 
 
 
