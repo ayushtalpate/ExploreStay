@@ -50,7 +50,7 @@ store.on("error", () => {
 
 const sessionOption ={
     store,
-    secret:process.env.SECRETgit ,
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{
@@ -61,9 +61,9 @@ const sessionOption ={
 };
 
 
-// app.get("/",(req,res)=>{
-//     res.send("Root route working");
-// })
+app.get("/",(req,res)=>{
+    res.send("Root route working");
+})
 
 
 
