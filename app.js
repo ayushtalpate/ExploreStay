@@ -65,6 +65,11 @@ app.get("/",(req,res)=>{
     res.send("Root route working");
 })
 
+app.use((req, res, next) => {
+    res.locals.currUser = req.user || null; // Set currUser from logged-in user, or null if not logged in
+    next();
+});
+
 
 
 app.use(session(sessionOption));
@@ -112,6 +117,12 @@ app.use(( err,req,res,next) => {
 //  res.status(statusCode).send(message);
 })
 
-app.listen(8080,() => {
-    console.log("Conneted to port 8080");
-});
+if (require.main === module) {
+    app.listen(8080, () => {
+        console.log("Connected to port 8080");
+    });
+}
+
+
+
+module.exports = app;
