@@ -117,11 +117,7 @@ app.use(( err,req,res,next) => {
 //  res.status(statusCode).send(message);
 })
 
-if (require.main === module) {
-    app.listen(8080, () => {
-        console.log("Connected to port 8080");
-    });
-}
+
 
 
 
